@@ -1,0 +1,25 @@
+{
+  "name": "silo-monorepo",
+  "version": "1.0.0",
+  "description": "Silo - The On-Chain Firewall for Solana AI Agents",
+  "author": "devanshucodes (https://github.com/devanshucodes)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devanshucodes/Silo.git"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/node": "^20.19.40",
+    "ts-node": "^10.9.2"
+  }
+}

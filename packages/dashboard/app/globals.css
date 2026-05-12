@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+:root {
+  --bg-obsidian: #0D0D0D;
+  --background: #131313;
+  --surface: #131313;
+  --text-muted: rgba(255, 255, 255, 0.6);
+  --primary: #ffffff;
+  --secondary: #d0bcff;
+  --accent-success: #4ADE80;
+  --on-surface: #e5e2e1;
+  --glass-stroke: rgba(255, 255, 255, 0.1);
+  --glass-fill: rgba(255, 255, 255, 0.03);
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg-obsidian);
+  color: var(--on-surface);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--secondary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.glass-card {
+  background: var(--glass-fill);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-stroke);
+}
+
+.glow-purple {
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(13, 13, 13, 0) 70%);
+}
+
+.glow-magenta {
+  background: radial-gradient(circle, rgba(217, 70, 239, 0.1) 0%, rgba(13, 13, 13, 0) 70%);
+}
+
+@keyframes pulse-clean {
+  0%, 100% { opacity: 0.6; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.1); }
+}
+
+.pulse-dot {
+  animation: pulse-clean 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.verdict-approve {
+  border-left: 3px solid var(--accent-success);
+}
+
+.verdict-escalate {
+  border-left: 3px solid #F5A524;
+  box-shadow: 0 0 20px rgba(245, 165, 36, 0.2);
+}
+
+.verdict-block {
+  border-left: 3px solid #F31260;
+  animation: pulse-block 2s ease-in-out infinite;
+}
+
+@keyframes pulse-block {
+  0%, 100% { box-shadow: 0 0 0 rgba(243, 18, 96, 0); }
+  50% { box-shadow: 0 0 10px rgba(243, 18, 96, 0.3); }
+}
+
+.truncate-address {
+  font-family: monospace;
+  font-size: 0.8rem;
+}

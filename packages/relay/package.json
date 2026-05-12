@@ -1,0 +1,26 @@
+{
+  "name": "@silo-sol/relay",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node-dev --respawn src/index.ts"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "ioredis": "^5.3.2",
+    "uuid": "^9.0.1",
+    "helmet": "^7.1.0",
+    "cors": "^2.8.5",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/cors": "^2.8.17",
+    "@types/uuid": "^9.0.8",
+    "typescript": "^5.4.5",
+    "ts-node-dev": "^2.0.0"
+  }
+}

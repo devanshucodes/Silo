@@ -1,0 +1,23 @@
+node_modules/
+.pnpm-store/
+dist/
+.next/
+*.log
+.DS_Store
+
+# Solana test validator data
+test-ledger/
+**/test-ledger/
+
+# Anchor build artifacts
+target/
+.anchor/
+
+# Environment — never commit secrets
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db

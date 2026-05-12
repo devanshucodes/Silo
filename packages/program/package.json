@@ -1,0 +1,15 @@
+{
+  "name": "@silo-sol/program",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "cargo build-sbf",
+    "test": "anchor test"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.32.1"
+  },
+  "devDependencies": {
+    "@solana/web3.js": "^1.98.4"
+  }
+}
